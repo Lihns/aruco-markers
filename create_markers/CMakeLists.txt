@@ -6,8 +6,11 @@ if(COMMAND cmake_policy)
 	cmake_policy(SET CMP0015 OLD)
 endif(COMMAND cmake_policy)
 
+set(OpenCV_DIR C:/Progra~1/opencv/build) 
 set (CMAKE_CXX_STANDARD 11)
 find_package(OpenCV REQUIRED)
+
+
 
 include_directories(${OPENCV_INCLUDE_DIRS})
 include_directories(${PROJECT_SOURCE_DIR}/include)

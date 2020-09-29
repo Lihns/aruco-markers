@@ -23,8 +23,6 @@
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/aruco.hpp>
-#include <opencv2/imgproc/types_c.h>
-#include <opencv2/imgproc/imgproc_c.h>
 #include <iostream>
 #include <cstdlib>
 
@@ -132,7 +130,8 @@ int main(int argc, char **argv)
             std::vector<cv::Vec3d> rvecs, tvecs;
             cv::aruco::estimatePoseSingleMarkers(corners, marker_length_m,
                     camera_matrix, dist_coeffs, rvecs, tvecs);
-
+            //获取到rvec以后，转为矩阵
+            
             // Draw axis for each marker
             for(int i=0; i < ids.size(); i++)
             {
